@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    font-family: "Playwrite HR Lijeva", cursive;
+}    
+
+body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("../assets/wood.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    text-transform: capitalize;
+    color: silver;
+}
+.container{
+    background-color: rgb(0, 0, 0);
+    padding: 35px 40px;
+    width: 780px;
+    border-radius: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2{
+    font-size: 1.6rem;
+}
+header .colum{
+    display: flex;
+    align-items: center;
+}
+header .colum span{
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+.volume input{
+    accent-color: #b2b2b2;
+}
+.check input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color:#4b4b4b ;
+    cursor: pointer;
+    position: relative;
+}
+.check input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: inherit;
+    background-color: #b2b2b2;
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.check input:checked::before{
+left: 2.1rem;
+background-color: white;
+}
+.piano-keys{
+    display: flex;
+    margin-top: 40px;
+}
+.piano-keys .tecla{
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+.white{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    background:linear-gradient(#fff 96%,#eee 4%);
+    color: black;
+    border: 1px solid black;
+}
+.black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    border-radius:0 0 5px 5px;
+    margin: 0 -22px 0 -22px;
+    background: linear-gradient(#333,#000);
+    color: white;
+}
+.piano-keys span{
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 1.13rem;
+}
+.piano-keys .white.active{
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0,0.2);
+    background: linear-gradient(to bottom #fff,#eee 100%);
+}
+.piano-keys .black.active{
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255,0.1);
+    background: linear-gradient(to bottom #000,#434343 );
+}
+.piano-keys .tecla.hide span{
+    display: none;
+}
